@@ -36,4 +36,5 @@
 >>>* behave - библиотека для тестирования сайтов
 >>>* playwright - для взаимодействия с сайтом
 >>>* behave-html-pretty-formatter - заполение отчетности
->>
+
+ссылка на репозитарий GitHub <https://github.com/UncleVasyafromIzhevsk/.stroyseven.ru/tree/master>
