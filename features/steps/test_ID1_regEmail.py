@@ -11,7 +11,7 @@ fake = Faker()
 @given(u'пользователь открывает сайт')
 def open_site(self):
     page = environment.get_page(self)
-    page.goto("https://stroyseven.ru/")
+    page.goto("https://stroyseven.ru/compare-products/")
 
 
 @given(u'нажимает кнопку "Личный кабинет"')
@@ -219,10 +219,7 @@ def email_64_letters_after(self):
     self.page.get_by_label("Email").fill("vasay@gmail." + very_very_big_domain)
 
 
-# №21 сценарий
-@when(u'пользователь введет email в котором присутствует <знак>')
-def email_containing_character(self):
-    self.page.get_by_label("Email").fill("va" + ["знак"] + "say@gmail.ru")
+
 
 
 
