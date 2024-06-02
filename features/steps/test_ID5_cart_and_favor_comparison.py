@@ -45,9 +45,9 @@ def id_test5_10(self):
 
 
 @when(u'пользователь нажал кнопку "Каталог"')
-def id_test5_14_42(self):
+def id_test5_13_45(self):
     """
-    Строка 14,44
+    Строка 13,45
     """
     self.page.get_by_label("Catalog").click()
 
@@ -200,25 +200,25 @@ def id_test5_36(self):
 
 
 @when(u'нажал на кнопку "Кабинет"')
-def id_test5_37(self):
+def id_test5_37_65(self):
     """
-    Строка 37
+    Строка 37,65
     """
     self.page.get_by_label("Login Register").click()
 
 
 @when(u'выбрал позицию "Выйти"')
-def id_test5_38(self):
+def id_test5_38_66(self):
     """
-    Строка 38
+    Строка 38,66
     """
     self.page.get_by_role("link", name="Выход").click()
 
 
 @then(u'он перешел на страницу "logout"')
-def id_test5_39(self):
+def id_test5_39_67(self):
     """
-    Строка 39
+    Строка 39,67
     """
     self.page.get_by_role("heading", name="Выход").click()
 
@@ -240,27 +240,134 @@ def id_test5_41(self):
 
 
 @when(u'в выпадающем списке выбрал "Листовые материалы"')
-def id_test5_45(self):
+def id_test5_46(self):
     """
-    Строка 45
+    Строка 46
     """
     self.page.get_by_role("link", name="Листовые материалы Листовые материалы").click()
 
 
 @when(u'в фильтре выбрал производителя "Германия"')
-def id_test5_46(self):
+def id_test5_47(self):
     """
-    Строка 46
+    Строка 47
     """
     self.page.get_by_role("button", name="Германия").click()
 
 
 @when(u'в выпадающей сноске нажал на кнопку "Показать 13 товаров"')
-def id_test5_47(self):
+def id_test5_48(self):
     """
-    Строка 47
+    Строка 48
     """
     self.page.get_by_role("button", name="Показать 13 товаров").first.click()
+
+
+@when(u'он нажал на рисунок с сердцем на окошке одного товара')
+def id_test5_49(self):
+    """
+    Строка 49
+    """
+    self.page.locator(".stock-status").first.hover()
+    self.page.locator(".wishlist > .btn").first.click()
+
+
+@then(u'появилось сообщение о добавлении этого товара в избранном')
+def id_test5_50_52_54(self):
+    """
+    Строка 50,52,54
+    """
+    self.page.get_by_text("×").click()
+
+
+@when(u'он нажал на рисунок с сердцем на окошке другого товара')
+def id_test5_51(self):
+    """
+    Строка 51
+    """
+    self.page.locator("div:nth-child(2) > .product-thumb > .caption > .ch-stock-status > .stock-status").hover()
+    self.page.locator("div:nth-child(2) > .product-thumb > .image > .addit-action > .wishlist > .btn").click()
+
+
+@when(u'он нажал на рисунок с сердцем на окошке третьего товара')
+def id_test5_53(self):
+    """
+    Строка 53
+    """
+    self.page.locator("div:nth-child(3) > .product-thumb > .caption > .ch-stock-status > .stock-status").hover()
+    self.page.locator("div:nth-child(3) > .product-thumb > .image > .addit-action > .wishlist > .btn").click()
+
+
+@when(u'пользователь нажал кнопку "Избранное"')
+def id_test5_55(self):
+    """
+    Строка 55
+    """
+    self.page.get_by_role("link", name="Избранное").click()
+
+
+@then(u'открылась страница избранного с количеством 3 и их ценами')
+def id_test5_56_60(self):
+    """
+    Строка 56,60
+    """
+    self.page.get_by_role("heading", name="Избранное").click()
+
+
+@when(u'пользователь в блоке"Наличие товаров" выбрал кнопку "Нет в наличии"')
+def id_test5_57(self):
+    """
+    Строка 57
+    """
+    self.page.get_by_text("Нет в наличии").click()
+
+
+@then(u'все выбранные товары скрылись')
+def id_test5_58(self):
+    """
+    Строка 58
+    """
+    self.page.get_by_text("Избранное пусто").click()
+
+
+@when(u'пользователь в блоке"Наличие товаров" выбрал кнопку "В наличии"')
+def id_test5_59(self):
+    """
+    Строка 59
+    """
+    self.page.get_by_text("В наличии", exact=True).click()
+
+
+@when(u'пользователь нажал кнопку "Сердечко с галочкой" на окошке одного товара')
+def id_test5_61(self):
+    """
+    Строка 61
+    """
+    self.page.get_by_text("В наличии").nth(2).hover()
+    self.page.get_by_role("button", name="Удалить из закладок").first.click()
+
+
+@then(u'появилось сообщении об удалении данного товара из избранного')
+def id_test5_62_64(self):
+    """
+    Строка 62,64
+    """
+    self.page.get_by_text("×").click()
+
+
+@then(u'открылась страница "Избранного" с надписью "Избранное пусто"')
+def id_test5_69(self):
+    """
+    Строка 69
+    """
+    self.expect(self.page.get_by_text("Избранное пусто")).to_be_visible()
+
+
+
+
+
+
+
 
 
 
