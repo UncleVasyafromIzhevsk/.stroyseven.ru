@@ -33,7 +33,7 @@ def id_test5_9(self):
     self.page.get_by_placeholder("E-Mail", exact=True).click()
     self.page.get_by_placeholder("E-Mail", exact=True).fill("tetst79@mail.ru")
     self.page.get_by_placeholder("Пароль").click()
-    self.page.get_by_placeholder("Пароль").fill("141009вы")
+    self.page.get_by_placeholder("Пароль").fill("141009ds")
 
 
 @given(u'нажимает кнопку "Войти"')
@@ -45,9 +45,9 @@ def id_test5_10(self):
 
 
 @when(u'пользователь нажал кнопку "Каталог"')
-def id_test5_13_45(self):
+def id_test5_13_43_61(self):
     """
-    Строка 13,45
+    Строка 13,45,61
     """
     self.page.get_by_label("Catalog").click()
 
@@ -200,25 +200,25 @@ def id_test5_36(self):
 
 
 @when(u'нажал на кнопку "Кабинет"')
-def id_test5_37_65(self):
+def id_test5_37_61_86(self):
     """
-    Строка 37,65
+    Строка 37,65,86
     """
     self.page.get_by_label("Login Register").click()
 
 
 @when(u'выбрал позицию "Выйти"')
-def id_test5_38_66(self):
+def id_test5_38_62_87(self):
     """
-    Строка 38,66
+    Строка 38,66,87
     """
     self.page.get_by_role("link", name="Выход").click()
 
 
 @then(u'он перешел на страницу "logout"')
-def id_test5_39_67(self):
+def id_test5_39_63_88(self):
     """
-    Строка 39,67
+    Строка 39,67,88
     """
     self.page.get_by_role("heading", name="Выход").click()
 
@@ -240,232 +240,247 @@ def id_test5_41(self):
 
 
 @when(u'в выпадающем списке выбрал "Листовые материалы"')
-def id_test5_46(self):
+def id_test5_44(self):
     """
-    Строка 46
+    Строка 44
     """
     self.page.get_by_role("link", name="Листовые материалы Листовые материалы").click()
 
 
 @when(u'в фильтре выбрал производителя "Германия"')
-def id_test5_47(self):
+def id_test5_45(self):
     """
-    Строка 47
+    Строка 45
     """
     self.page.get_by_role("button", name="Германия").click()
 
 
 @when(u'в выпадающей сноске нажал на кнопку "Показать 13 товаров"')
-def id_test5_48(self):
+def id_test5_46(self):
     """
-    Строка 48
+    Строка 46
     """
     self.page.get_by_role("button", name="Показать 13 товаров").first.click()
 
 
 @when(u'он нажал на рисунок с сердцем на окошке одного товара')
-def id_test5_49(self):
+def id_test5_47(self):
     """
-    Строка 49
+    Строка 47
     """
     self.page.locator(".stock-status").first.hover()
     self.page.locator(".wishlist > .btn").first.click()
 
 
 @then(u'появилось сообщение о добавлении этого товара в избранном')
-def id_test5_50_52_54(self):
+def id_test5_48_50_52(self):
     """
-    Строка 50,52,54
+    Строка 48,50,52
     """
     self.page.get_by_text("×").click()
 
 
 @when(u'он нажал на рисунок с сердцем на окошке другого товара')
-def id_test5_51(self):
+def id_test5_49(self):
     """
-    Строка 51
+    Строка 49
     """
     self.page.locator("div:nth-child(2) > .product-thumb > .caption > .ch-stock-status > .stock-status").hover()
     self.page.locator("div:nth-child(2) > .product-thumb > .image > .addit-action > .wishlist > .btn").click()
 
 
 @when(u'он нажал на рисунок с сердцем на окошке третьего товара')
-def id_test5_53(self):
+def id_test5_51(self):
     """
-    Строка 53
+    Строка 51
     """
     self.page.locator("div:nth-child(3) > .product-thumb > .caption > .ch-stock-status > .stock-status").hover()
     self.page.locator("div:nth-child(3) > .product-thumb > .image > .addit-action > .wishlist > .btn").click()
 
 
 @when(u'пользователь нажал кнопку "Избранное"')
-def id_test5_55(self):
+def id_test5_53_64(self):
     """
-    Строка 55
+    Строка 53,64
     """
     self.page.get_by_role("link", name="Избранное").click()
 
 
 @then(u'открылась страница избранного с количеством 3 и их ценами')
-def id_test5_56_60(self):
+def id_test5_54_58(self):
     """
-    Строка 56,60
+    Строка 54,58
     """
     self.page.get_by_role("heading", name="Избранное").click()
 
 
 @when(u'пользователь в блоке"Наличие товаров" выбрал кнопку "Нет в наличии"')
-def id_test5_57(self):
+def id_test5_55(self):
     """
-    Строка 57
+    Строка 55
     """
     self.page.get_by_text("Нет в наличии").click()
 
 
 @then(u'все выбранные товары скрылись')
-def id_test5_58(self):
+def id_test5_56(self):
     """
-    Строка 58
+    Строка 56
     """
     self.page.get_by_text("Избранное пусто").click()
 
 
 @when(u'пользователь в блоке"Наличие товаров" выбрал кнопку "В наличии"')
-def id_test5_59(self):
+def id_test5_57(self):
     """
-    Строка 59
+    Строка 57
     """
     self.page.get_by_text("В наличии", exact=True).click()
 
 
 @when(u'пользователь нажал кнопку "Сердечко с галочкой" на окошке одного товара')
-def id_test5_61(self):
+def id_test5_59(self):
     """
-    Строка 61
+    Строка 59
     """
     self.page.get_by_text("В наличии").nth(2).hover()
     self.page.get_by_role("button", name="Удалить из закладок").first.click()
 
 
 @then(u'появилось сообщении об удалении данного товара из избранного')
-def id_test5_62_64(self):
+def id_test5_60(self):
     """
-    Строка 62,64
+    Строка 60
     """
     self.page.get_by_text("×").click()
 
 
 @then(u'открылась страница "Избранного" с надписью "Избранное пусто"')
+def id_test5_65(self):
+    """
+    Строка 65
+    """
+    self.page.get_by_text("Избранное пусто").click()
+
+
+@when(u'в выпадающем списке выбрал "Напольные покрытия"')
 def id_test5_69(self):
     """
     Строка 69
     """
-    self.expect(self.page.get_by_text("Избранное пусто")).to_be_visible()
+    self.page.get_by_role("link", name="Напольные покрытия Напольные покрытия").click()
 
 
-
-
-
-
-
-
-
-
-
-
-##############################################
-
-
-@when(u'пользователь вводит случайный адрес')
-def id_test4_10(self):
+@when(u'в фильтре выбрал производителя "ceresit"')
+def id_test5_70(self):
     """
-    Строка 10
+    Строка 70
     """
-    self.page.get_by_placeholder("Адрес", exact=True).click()
-    self.page.get_by_placeholder("Адрес", exact=True).fill("м")
-    self.page.get_by_text("г Москва").click()
+    self.page.get_by_role("button", name="Ceresit").click()
 
 
-@when(u'вводит случайный вес товара')
-def id_test4_11(self):
+@when(u'в выпадающей сноске нажал на кнопку "Показать 4 товаров"')
+def id_test5_71(self):
     """
-    Строка 11
+    Строка 71
     """
-    self.page.get_by_placeholder("Укажите вес заказа, кг").click()
-    self.page.get_by_placeholder("Укажите вес заказа, кг").fill("56")
-    self.page.get_by_placeholder("Укажите вес заказа, кг").press("Enter")
+    self.page.get_by_role("button", name="Показать 4 товара").first.click()
 
 
-@when(u'вводит случайный обЪем товара')
-def id_test4_12(self):
+@when(u'он нажал на рисунок с весами на окошке одного товара')
+def id_test5_72(self):
     """
-    Строка 12
+    Строка 72
     """
-    self.page.get_by_placeholder("Укажите объем заказа, м").click()
-    self.page.get_by_placeholder("Укажите объем заказа, м").fill("5")
-    self.page.get_by_placeholder("Укажите объем заказа, м").press("Enter")
+    self.page.get_by_text("В наличии").first.hover()
+    self.page.get_by_label("Compare").first.click()
 
 
-@then(u'в поле "Расчетная стоимость" появиться некая цена')
-def id_test4_13(self):
+@then(u'появилось сообщение о добавлении этого товара в сравнение')
+def id_test5_73_75_77(self):
     """
-    Строка 13
+    Строка 73,75,77
     """
-    pass
+    self.page.get_by_text("×").click()
 
 
-@when(u'в блоке срока доставки поменять значение радиокнопки')
-def id_test4_14(self):
+@when(u'он нажал на рисунок с весами на окошке другого товара')
+def id_test5_74(self):
     """
-    Строка 14
+    Строка 74
     """
-    self.page.get_by_label("Точно ко времени").check()
+    self.page.get_by_text("В наличии").nth(1).hover()
+    self.page.get_by_label("Compare").nth(1).click()
 
 
-@then(u'в поле "Расчетная стоимость" цена изменится')
-def id_test4_15_17_19_21_23_25(self):
+@when(u'он нажал на рисунок с весами на окошке третьего товара')
+def id_test5_76(self):
     """
-    Строка 15,17,19,21,23,25
+    Строка 76
     """
-    pass
+    self.page.get_by_text("В наличии").nth(2).hover()
+    self.page.get_by_label("Compare").nth(2).click()
 
 
-@when(u'в блоке способ разгрузки поменять значение радиокнопки')
-def id_test4_16(self):
+@when(u'пользователь нажал кнопку "Сравнение"')
+def id_test5_78_89(self):
     """
-    Строка 16
+    Строка 78,89
     """
-    self.page.get_by_label("Разгрузка без проноса (до 20").check()
+    self.page.get_by_role("link", name="Сравнение").click()
 
 
-@when(u'в блоке Разгрузка манипулятором установить флажок')
-def id_test4_18(self):
+@then(u'открылась страница Сравнение товаров с количеством 3 и их ценами и описанием')
+def id_test5_79(self):
     """
-    Строка 18
+    Строка 79
     """
-    self.page.get_by_label("Разгрузка манипулятором").check()
+    self.page.get_by_role("heading", name="Сравнение товаров").click()
 
 
-@when(u'в блоке Подъем на этаж установить флажок')
-def id_test4_20(self):
+@when(u'пользователь нажал кнопку "Купить" в таблице одного товара')
+def id_test5_80(self):
     """
-    Строка 20
+    Строка 80
     """
-    self.page.get_by_label("Подъем на этаж").check()
+    self.page.get_by_role("button", name="Купить").first.click()
 
 
-@when(u'в поле "Укажите номер этажа" изменить значение')
-def id_test4_22(self):
+@then(u'появилось сообщении о добавлении данного товара в корзину')
+def id_test5_81(self):
     """
-    Строка 22
+    Строка 81
     """
-    self.page.get_by_label("Укажите номер этажа").fill("4")
-    self.page.get_by_label("Укажите номер этажа").press("Enter")
+    self.page.get_by_role("button", name="×").click()
 
 
-@when(u'в блоке "Тип подъема на этаж" поменять значение радиокнопки')
-def id_test4_24(self):
+@when(u'пользователь нажал кнопку "Удалить" в таблице одного товара')
+def id_test5_82(self):
     """
-    Строка 24
+    Строка 82
     """
-    self.page.get_by_label("Без лифта").check()
+    self.page.get_by_role("link", name="Удалить").first.click()
+
+
+@then(u'данный товар удалился со страницы сравнения')
+def id_test5_83_85(self):
+    """
+    Строка 83,85
+    """
+    self.page.get_by_text("Удалено из списка сравнений ×").click()
+
+
+@when(u'пользователь нажал кнопку "Удалить" в таблице другого товара')
+def id_test5_84(self):
+    """
+    Строка 84
+    """
+    self.page.get_by_role("link", name="Удалить").first.click()
+
+
+@then(u'открылась страница Сравнение товаров с надписью "Вы не выбрали ни одного товара для сравнения."')
+def id_test5_90(self):
+    """
+    Строка 90
+    """
+    self.page.get_by_text("Вы не выбрали ни одного товара для сравнения").click()
