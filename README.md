@@ -1,2 +1,2 @@
-#.stroyseven.ru
+# .stroyseven.ru
 =
