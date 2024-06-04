@@ -1,1 +1,2 @@
-# .stroyseven.ru
+#.stroyseven.ru
+=
